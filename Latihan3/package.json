@@ -1,0 +1,20 @@
+{
+  "name": "latihan3",
+  "version": "1.0.0",
+  "description": "Ini hanya untuk latihan install modul",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "latihan",
+    "modul"
+  ],
+  "author": "Wahyu",
+  "license": "MIT",
+  "dependencies": {
+    "geolib": "^3.3.4",
+    "njedhir-logger": "^1.0.2",
+    "say": "^0.16.0"
+  }
+}

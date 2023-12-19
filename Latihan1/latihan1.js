@@ -17,6 +17,9 @@ let isWriting = false
 // undefined
 let color = undefined
 
+// BigInt
+
+
 // Object
 let nazar = {
   umur: 17,

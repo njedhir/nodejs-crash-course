@@ -58,4 +58,12 @@ const filteredStudentList1 = students
   .filter(student => student.age < 20)
   .map(student => ({ nama: student.name }))
 
-console.log(filteredStudentList1)
+// console.log(filteredStudentList1)
+
+
+function filterStudent(student) {
+  return student.age < 20
+}
+
+const filteredStudentList2 = students.filter(filterStudent)
+console.log(filteredStudentList2)

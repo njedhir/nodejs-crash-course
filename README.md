@@ -13,3 +13,10 @@ Peserta dalam pelatihan ini adalah:
 |Nazar|17|
 |Taslim|18|
 |Fakhrul|17|
+
+
+Daftar barang:
+* Meja
+* Kursi
+* Pensil
+* 

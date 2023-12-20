@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Alice White",
+    "age": 18,
+    "grade": 10
+  },
+  {
+    "name": "Bob Brown",
+    "age": 19,
+    "grade": 11
+  },
+  {
+    "name": "Charlie Green",
+    "age": 20,
+    "grade": 12
+  },
+  {
+    "name": "Diana Blue",
+    "age": 18,
+    "grade": 10
+  },
+  {
+    "name": "Edward Black",
+    "age": 19,
+    "grade": 11
+  },
+  {
+    "name": "Fiona Yellow",
+    "age": 20,
+    "grade": 12
+  },
+  {
+    "name": "George Grey",
+    "age": 18,
+    "grade": 10
+  },
+  {
+    "name": "Helen Red",
+    "age": 19,
+    "grade": 11
+  },
+  {
+    "name": "Ian Orange",
+    "age": 20,
+    "grade": 12
+  },
+  {
+    "name": "Jennifer Purple",
+    "age": 18,
+    "grade": 10
+  }
+]

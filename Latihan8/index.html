@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- Semua yg ada disini bisa dimanipulasi oleh vue -->
+    {{ greeting }}<br>
+    <button v-bind:title="judul" v-on:click="btnOnClick">ClickMe</button>
+    <div>Sama dengan</div>
+    <button :title="judul" @click="btnOnClick">ClickMe</button>
+
+    <!-- conditional rendering -->
+    <h2 v-if="isMuncul">Halo Taslim</h2>
+
+    <!-- Dynamic Show -->
+    <h2 v-show="isShown">Halo Fakhrul</h2>
+
+    <!-- Loop Rendering -->
+    <h2>Daftar Karyawan</h2>
+    <div v-for="(nama, index) in karyawan">{{index + 1}}. {{ nama }}</div>
+
+    <!-- Loop Rendering -->
+    <h2>Daftar Mobil</h2>
+    <div>
+      <form>
+        <input placeholder="Brand" type="text" v-model="carInput.brand" /><br>
+        <!-- <p>{{ carInput.brand }}</p> -->
+        <input
+          placeholder="Type"
+          type="text"
+          v-model="carInput.type"
+        /><br>
+        <input placeholder="Seats" type="text" v-model="carInput.seats" /><br>
+        <input type="button" value="Add" @click.prevent="addCar"><span v-show="isMsgShown">Data has been added successfully</span>
+      </form>
+    </div>
+    <div v-for="(car, idx) in carsComputed">
+      <!-- <h3>{{car.brand}} <button @click="removeCar(idx)">-</button></h3>
+      <p>Type: {{car.type}} - Seats: {{car.seats}}</p> -->
+      <kendaraan
+        :brand="car.brand"
+        :cartype="car.type"
+        :seats="car.seats"
+        :index="idx"
+        :judultype="'Model'"
+        @removecar="removeCar"
+      ></kendaraan>
+    </div>
+    <br><hr>
+    <div>
+      <h4>Filter:</h4>
+      <input type="text" v-model="carFilterParams">
+    </div>
+    <!-- <div v-for="(car, idx) in carsFiltered">
+      <kendaraan
+        :brand="car.brand"
+        :cartype="car.type"
+        :seats="car.seats"
+        :index="idx"
+        :judultype="'Model'"
+        @removecar="removeCar"
+      ></kendaraan>
+    </div> -->
+    <br><hr>
+    <div>
+      <h4>Filter:</h4>
+      <input type="text" v-model="carFilterParams">
+    </div>
+    <div>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Brand</th>
+            <th>Type</th>
+            <th>Seats</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(mbl, idx) in carsFiltered">
+            <td>{{ mbl.brand }}</td>
+            <td>{{ mbl.type }}</td>
+            <td>{{ mbl.seats }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>

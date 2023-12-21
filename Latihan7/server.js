@@ -6,6 +6,9 @@ const PORT = process.env.SERVICE_PORT || 30000
 const routes = require('./services')
 
 const app = express()
+
+app.use(express.json())
+
 app.use(routes)
 
 app.get('/', (req, res) => {

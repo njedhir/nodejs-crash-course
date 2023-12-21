@@ -63,7 +63,7 @@ const app = new Vue({
       {
         brand: 'Esemka',
         type: 'Ghaib',
-        seats: 0
+        seats: 15
       },
     ]
   },
@@ -95,7 +95,11 @@ const app = new Vue({
       return this.cars
     },
     carsFiltered() {
-      return this.cars.filter(car => car.brand.includes(this.carFilterParams))
+      return this.cars.filter(car => {
+        return (car.brand.includes(this.carFilterParams) ||
+        car.type.includes(this.carFilterParams) ||
+        car.seats.toString().includes(this.carFilterParams))
+      })
     }
   }
 })
